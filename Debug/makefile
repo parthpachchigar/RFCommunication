@@ -23,25 +23,25 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: LPC1769_GPIO.axf
+all: CognitiveRadio.axf
 
 # Tool invocations
-LPC1769_GPIO.axf: $(OBJS) $(USER_OBJS)
+CognitiveRadio.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"C:\Users\parth\Documents\LPCXpresso_8.2.2_650\workspace\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="LPC1769_GPIO.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "Hello_world_Debug.ld" -o "LPC1769_GPIO.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"C:\Users\parth\Documents\LPCXpresso_8.2.2_650\workspace\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="CognitiveRadio.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "Hello_world_Debug.ld" -o "CognitiveRadio.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) LPC1769_GPIO.axf
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) CognitiveRadio.axf
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "LPC1769_GPIO.axf"; # arm-none-eabi-objcopy -v -O binary "LPC1769_GPIO.axf" "LPC1769_GPIO.bin" ; # checksum -p LPC1769 -d "LPC1769_GPIO.bin";
+	-arm-none-eabi-size "CognitiveRadio.axf"; # arm-none-eabi-objcopy -v -O binary "CognitiveRadio.axf" "CognitiveRadio.bin" ; # checksum -p LPC1769 -d "CognitiveRadio.bin";
 	-@echo ' '
 
 .PHONY: all clean dependents

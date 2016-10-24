@@ -4,17 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/Hello_world.c \
+../src/LISA.c \
 ../src/cr_startup_lpc175x_6x.c \
 ../src/crp.c 
 
 OBJS += \
-./src/Hello_world.o \
+./src/LISA.o \
 ./src/cr_startup_lpc175x_6x.o \
 ./src/crp.o 
 
 C_DEPS += \
-./src/Hello_world.d \
+./src/LISA.d \
 ./src/cr_startup_lpc175x_6x.d \
 ./src/crp.d 
 
