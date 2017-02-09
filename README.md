@@ -1,5 +1,2 @@
-//===========================================================================================
-// Name        : Cognitive Radio
-// Author      : Parth Pachchigar
-// Description : This project is about implementing cognitive radio on LPC 1769 Xpresso.
-//===========================================================================================
+This project is about implementing protocol for radio frequency communication on LPC 1769 Xpresso using 433 MHz RF Tx and Rx. The protocol includes synchronization, scrambling-descrambling and linear block coding.
+
